@@ -1,3 +1,4 @@
+from importlib.resources import contents
 from django.shortcuts import render
 
 # Create your views here.
@@ -9,3 +10,10 @@ def lista(request):
     return render(request,"lista.html")
 def chi_siamo(request):
     return render(request,"chi_siamo.html")
+def variabili(request):
+    context={
+        'var1': 'Prima varibile',
+        'var2': 'Seconda varibile',
+        'var3': 'Terza varibile'
+    }
+    return render(request,"variabili.html",context)
