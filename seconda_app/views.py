@@ -1,3 +1,4 @@
+import datetime
 from django.shortcuts import render
 
 def es_if(request):
@@ -16,4 +17,12 @@ def else_if_elif(request):
     }
 
     return render(request,"else_if_elif.html",context)
+def es_for(request):
+    context={
+       'list1':[1, datetime.date(2019,7,16),'Do not give up'],
+       'list2':[1, datetime.date(2019,7,16),'Do not give up']
+    }
+
+    return render(request,"es_for.html",context)
+
 
