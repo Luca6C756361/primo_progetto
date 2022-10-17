@@ -1,6 +1,7 @@
 import datetime
 from django.shortcuts import render
-
+def index(request):
+    return render(request,"index.html")
 def es_if(request):
     context={
         'var1':200,
