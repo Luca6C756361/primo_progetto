@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+    {%block content%}
+    {% if var1 < var2%}
+        <b><p><font color="red">Variabile 1 e il numero minore {{var2}}</font></p>    </b> </br>
+        <b><p><font color="green">Variabile 2 il numero maggiore {{var1}}</font></p>  </b> </br>
+        <b><p>somma={{somma}}</p></b> </br>
+
+    {%elif var1 > var2 %}
+        <b><p><font color="red">Variabile 2 e il numero minore {{var2}}</font></p></b> </br>
+        <b><p><font color="green">Variabile 1 il numero maggiore {{var1}}</font></p></b> <br>
+        <b><p>somma={{somma}}</p></b> </br>
+    {%else%}
+     <b><p>I numeri son uguali</p></b> </br>
+     <b><p>somma={{somma}}</p></b>  </br>
+    {%endif%} 
+    {%endblock content%}
