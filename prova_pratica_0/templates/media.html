@@ -1,4 +1,14 @@
 {%extends "base.html"%}
     {%block content%}
-     
+        <h1>Media</h1>
+        {%for i in lista%}
+            {{i}}
+        {% endfor %}
+        {% if media < 6 %}
+            <b><p><font color="red">{{media}}</font></p>    </b> </br>
+        {% elif media > 6%}
+            <b><p><font color="green">{{media}}</font></p>  </b> </br>
+        {%elif media == 6%}
+            <b><p>{{media}}</p></b>    
+        {% endif %}
     {%endblock content%}

@@ -1,7 +1,9 @@
 from importlib.resources import contents
-from re import X
+from multiprocessing import context
+from re import S, X
 from django.shortcuts import render
 import random
+
 
 # Create your views here.
 def somma(request):
@@ -14,7 +16,18 @@ def somma(request):
     }
     return render(request,"somma.html",context)
 def media(request):
-    return render(request,"media.html")
-def index(request):
-    return render(request,"index.html")
+    lista=[]
+    s=0
+    for i in range(30):
+        num=random.randint(0,10)
+        s+=num
+        lista.append(num)
+        media=s/30
+        context={
+            'lista':lista,
+            'media':media
+        }
+    return render(request,"media.html",context)
+def index_prova(request):
+    return render(request,"index_prova.html")
 
