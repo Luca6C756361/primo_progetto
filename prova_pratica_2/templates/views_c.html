@@ -1,0 +1,9 @@
+{%extends "base.html"%}
+    {%block content%}
+        <h1>Studenti</h1>
+        {% for key, values in medie.items %}   
+         <ul> 
+            <li>{{key}} : {{values}}</li>
+         </ul>
+        {% endfor %} 
+    {%endblock content%}
